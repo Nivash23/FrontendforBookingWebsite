@@ -1,0 +1,431 @@
+*{
+    font-family: sans-serif;
+}
+
+#body{
+    height:100%;
+    width:100vw;
+    margin:-10px -10px -10px -10px;
+    padding:0px 0px 0px 0px;
+    border:0px 0px 0px 0px;
+    background-color: #eceff2;
+    box-sizing: border-box;
+    /* overflow-x: scroll; */
+    
+}
+#navigation{
+   height:180px;
+   width:100vw;
+   background-color: rgb(38, 38, 181);
+   color: white;
+}
+#nav{
+    display: flex;
+}
+#menus{
+    display: flex;
+}
+#menus div{
+    margin:1.7rem 1.2rem 0rem 1.2rem;
+    font-size: 1.2rem;
+    font-weight:bold;
+    cursor: pointer;
+}
+#menus img{
+    width:1.5rem;
+    height:1.5rem;
+    border-radius: 24px;
+}
+#menus button{
+    width:5.6rem;
+    height:3.1rem;
+    border-radius: 5px;
+    border-color: blue;
+    margin:1.2rem 1.2rem 0rem 1.2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: blue;
+    cursor: pointer;
+}
+#menus ion-icon{
+  width:1.6rem;
+  height:1.6rem;
+}
+
+#logo{
+    margin:1.2rem 39rem 0rem 12.4rem;
+    font-size: 1.8rem; 
+    font-weight: bold;
+}
+#navrouters{
+    display: flex;
+    position: absolute;
+    margin:6.2rem 0rem 0rem 12.4rem;
+    font-size: 1.5rem;
+    transition: 2s;
+   
+}
+#navrouters div{
+    margin-right: 4.3rem;
+    padding:0.3rem 0.6rem 0.6rem 0.6rem;
+    cursor: pointer;
+    /* width:170px; */
+    /* height:70px; */
+}
+#navrouters div:hover{
+    background-color: rgb(50, 50, 177);
+}
+.Ractive{
+    border-bottom: 1px solid white;
+    background-color: rgb(50, 50, 177);
+     
+}
+#navrouters ion-icon{
+    margin:16px 10px 0px 0px;
+}
+#bodybackimg img{
+    width:100vw;
+    height:27.9rem;
+}
+
+#htextinimg{
+    position: absolute;
+    font-size: 4rem;
+    font-weight:bolder;
+    width:38.1rem;
+    z-index: 1;
+    margin:-27rem 0rem 0rem 12.4rem;
+    color: white;
+}
+#ptextinimg{
+    position: absolute;
+    font-size: 1.8rem;
+    font-weight:bolder;
+    width:38.1rem;
+    z-index: 1;
+    margin:-14rem 0rem 0rem 12.2rem;
+    color: white;
+}
+#discoverbut{
+    background-color: rgb(69, 69, 243);
+    padding:1.2rem 1rem 1.2rem 1rem;
+    font-size: 1.2rem;
+    color: white;
+    width:15.5rem;
+    border-radius: 5px;
+    position: absolute;
+    margin:-10rem 0rem 0rem 12.4rem;
+    z-index: 1;
+}
+#inputdetails input{
+    /* position: absolute; */
+    width:380px;
+    height:40px;
+    border: none;
+    outline: none;
+    /* margin-top:-10px; */
+
+
+
+}
+#inputdetails ion-icon{
+    font-size: 25px;
+    margin:18px 15px 0px 10px;
+}
+
+#inputdetails input::placeholder{
+    font-size: 20px;
+}
+/* #iusericon{
+    position: absolute;
+} */
+#inputdetails{
+    display: flex;
+    position: absolute;
+    /* padding:5px 5px 5px 5px; */
+    margin:-40px 0px 0px 280px;
+}
+#inputplace{
+    width:440px;
+    height:70px;
+    background-color: white;
+    border:5px solid orange;
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* padding:5px 5px 5px 5px; */
+
+}
+#inputmembers{
+    width:440px;
+    height:70px;
+    background-color: white;
+    border:5px solid orange;
+    /* border-radius: 10px; */
+   
+
+
+}
+#inputdate{
+    height: 70px;
+    background-color: white;
+    border:5px solid orange;
+   
+
+}
+#search{
+    width:110px;
+    font-size: 20px;
+     border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border:5px solid orange;
+    background-color: rgb(52, 52, 249);
+    color:white;
+
+}
+#inputdate input{
+    width:150px;
+    margin:0px 20px 0px 20px;
+}
+#checkboxforflight input{
+    margin: 60px 10px 0px 280px;
+    width:20px;
+    height: 20px;
+}
+#checkboxforflight{
+    font-size: 20px;
+    color: rgb(79, 78, 78);
+    
+}
+#offers h2{
+    margin:40px 0px 10px 260px;
+    font-size: 30px;
+    font-weight: bold;
+}
+#offerdesc{
+    color:rgb(110, 111, 111);
+    font-size: 20px;
+    margin:20px 0px 10px 260px;
+}
+#offerboxes{
+    display: flex;
+    margin:30px 0px 10px 250px;
+}
+#flights{
+    border: 1px solid rgb(188, 187, 187);
+    height:200px;
+    width:670px;
+    border-radius: 12px;
+    padding: 10px 10px 10px 10px;
+    margin-right: 25px;
+}
+#flights img{
+    width:180px;
+    height:140px;
+    position: absolute; 
+    margin:-70px 20px 0px 310px;
+}
+#flighthead{
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 30px;
+}
+#flightdesc{
+    margin-top: 20px;
+    color:rgb(89, 88, 88);
+}
+#flights button{
+    background-color: rgb(50, 50, 248);
+    height:40px;
+    width:160px;
+    color:white;
+    margin:15px 0px 0px 0px;
+    border-radius:10px;
+    font-size: 18px;
+}
+#gateway{
+    width:680px;
+    height:200px;
+}
+#gateway img{
+    width:680px;
+    height:200px;
+    border-radius: 12px;
+}
+#gatehead{
+    font-weight: bold;
+    font-size: 22px;
+    margin: -180px 0px 0px 20px;
+    position: absolute;
+    color:rgb(252, 251, 251);
+}
+#gatedesc{
+   position: absolute; 
+   margin:-150px 0px 0px 20px;
+   font-size: 19px;
+   width:560px;
+   color: white;
+}
+#gateway button{
+    position:absolute;
+    margin:140px 0px 0px -660px;
+    height: 40px;
+    background-color:rgb(50, 50, 248) ;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+}
+#propertytype{
+    margin:100px 0px 0px 250px;
+}
+#propertytype h2{
+     font-size: 30px;
+     font-weight: bold;
+}
+#properties{
+    width:1400px;
+    margin-top:40px;
+    font-weight: bold;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    height: 350px;
+    scrollbar-width: none;    
+}
+#properties img{
+    width:320px;
+    border-radius: 20px;
+    margin:5px 20px 5px 10px;
+}
+#propertyname{
+    font-size: 20px;
+    margin:15px 0px 0px 90px;
+}
+#property{
+    display: flex;
+}
+#PLeftarrow,#PRightarrow{
+    width:40px;
+    height:40px;
+    background-color:white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+#PLeftarrow{
+    position:absolute;
+    margin:110px 0px 0px -10px;
+    cursor: pointer;
+}
+#PRightarrow{
+    position: absolute;
+    margin:110px 0px 0px 1370px;
+    cursor: pointer;
+}
+#Regcontainer{
+  width:500px;
+  height:650px;
+  background-color: rgb(228, 228, 228);
+  position: fixed;
+  margin:-1430px 0px 0px 580px;
+  padding:20px 20px 20px 20px;
+  z-index: 2;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+#Regcontainer label,h4{
+    font-weight: bold;
+    margin:50px 0px 10px 50px;
+}
+#Regcontainer input{
+    width:360px;
+    height:43px;
+    margin-left:50px;
+}
+#signupbut{
+    margin:20px 0px 0px 170px;
+    background-color: rgb(50, 50, 248);
+    color:azure;
+
+}
+#orsplit{
+    width:600px;
+    margin:20px 0px 0px 50px;
+}
+#logcontainer{
+  width:500px;
+  height:650px;
+  background-color: rgb(228, 228, 228);
+  position: fixed;
+  margin:-1430px 0px 0px 580px;
+  padding:20px 20px 20px 20px;
+  z-index: 2;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+#logcontainer label,h4{
+    font-weight: bold;
+    margin:50px 0px 10px 50px;
+}
+#logcontainer input{
+    width:360px;
+    height:43px;
+    margin-left: 50px;
+}
+.signupbut{
+    margin:20px 0px 0px 170px;
+    background-color: rgb(50, 50, 248);
+    color:azure;
+
+}
+.containerswitches{
+    margin:20px 0px 0px 90px;
+}
+#Rlogbut,#LRegbut{
+    font-weight: bold;
+    cursor: pointer;
+}
+.orsplit{
+    width:600px;
+    margin:20px 0px 0px 50px;
+}
+
+.Reinactive{
+    #Regcontainer{
+        display: none;
+    }
+}
+.Reactive{
+    #Regcontainer{
+        display: block;
+    }
+}
+.Linactive{
+    #logcontainer{
+        display: none;
+    }
+}
+.Lactive{
+    #logcontainer{
+        display: block;
+    }
+}
+.responsemsg{
+    margin:20px 0px 0px 100px;
+}
+.GoogleLogin{
+    margin:40px 0px 0px 100px;
+    
+}
+
+
+@media (min-width:1200px) and (max-width:1450px)
+{
+    #logo{
+        margin:0px 150px 0px 80px;
+    }
+    #navrouters{
+        margin-left: 130px;
+    }
+}
+
