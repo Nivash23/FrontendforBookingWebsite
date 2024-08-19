@@ -10,6 +10,7 @@
     border:0px 0px 0px 0px;
     background-color: #eceff2;
     box-sizing: border-box;
+    overflow: hidden;
     /* overflow-x: scroll; */
     
 }
@@ -27,7 +28,7 @@
 }
 #menus div{
     margin:1.7rem 1.2rem 0rem 1.2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight:bold;
     cursor: pointer;
 }
@@ -37,8 +38,8 @@
     border-radius: 24px;
 }
 #menus button{
-    width:5.6rem;
-    height:3.1rem;
+    width:5.4rem;
+    height:2.9rem;
     border-radius: 5px;
     border-color: blue;
     margin:1.2rem 1.2rem 0rem 1.2rem;
@@ -53,15 +54,15 @@
 }
 
 #logo{
-    margin:1.2rem 39rem 0rem 12.4rem;
-    font-size: 1.8rem; 
+    margin:1.2rem 28rem 0rem 12.4rem;
+    font-size: 1.5rem; 
     font-weight: bold;
 }
 #navrouters{
     display: flex;
     position: absolute;
     margin:6.2rem 0rem 0rem 12.4rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: 2s;
    
 }
@@ -69,8 +70,8 @@
     margin-right: 4.3rem;
     padding:0.3rem 0.6rem 0.6rem 0.6rem;
     cursor: pointer;
-    /* width:170px; */
-    /* height:70px; */
+    /* width:170px;
+     height:70px; */
 }
 #navrouters div:hover{
     background-color: rgb(50, 50, 177);
@@ -90,7 +91,7 @@
 
 #htextinimg{
     position: absolute;
-    font-size: 4rem;
+    font-size: 3.6rem;
     font-weight:bolder;
     width:38.1rem;
     z-index: 1;
@@ -99,7 +100,7 @@
 }
 #ptextinimg{
     position: absolute;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight:bolder;
     width:38.1rem;
     z-index: 1;
@@ -109,9 +110,9 @@
 #discoverbut{
     background-color: rgb(69, 69, 243);
     padding:1.2rem 1rem 1.2rem 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
-    width:15.5rem;
+    width:13.8rem;
     border-radius: 5px;
     position: absolute;
     margin:-10rem 0rem 0rem 12.4rem;
@@ -119,11 +120,14 @@
 }
 #inputdetails input{
     /* position: absolute; */
-    width:380px;
-    height:40px;
+    width:290px;
+    height:30px;
     border: none;
     outline: none;
-    /* margin-top:-10px; */
+    margin:20px 0px 10px 10px;
+
+     /* margin-top: 0px;  */
+     /* margin-top: -180px; */
 
 
 
@@ -143,13 +147,15 @@
     display: flex;
     position: absolute;
     /* padding:5px 5px 5px 5px; */
-    margin:-40px 0px 0px 280px;
+    margin:-40px 0px 0px 230px;
 }
 #inputplace{
-    width:440px;
+    display: flex;
+    width:340px;
     height:70px;
     background-color: white;
     border:5px solid orange;
+    /* margin:-50px 0px 0px 30px; */
     /* border-radius: 10px; */
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -157,7 +163,8 @@
 
 }
 #inputmembers{
-    width:440px;
+    display: flex;
+    width:340px;
     height:70px;
     background-color: white;
     border:5px solid orange;
@@ -167,6 +174,7 @@
 
 }
 #inputdate{
+    padding: 20px 5px 10px 5px;
     height: 70px;
     background-color: white;
     border:5px solid orange;
@@ -188,50 +196,50 @@
     margin:0px 20px 0px 20px;
 }
 #checkboxforflight input{
-    margin: 60px 10px 0px 280px;
+    margin: 60px 10px 0px 240px;
     width:20px;
     height: 20px;
 }
 #checkboxforflight{
-    font-size: 20px;
+    font-size: 17px;
     color: rgb(79, 78, 78);
     
 }
 #offers h2{
-    margin:40px 0px 10px 260px;
-    font-size: 30px;
+    margin:40px 0px 10px 240px;
+    font-size: 27px;
     font-weight: bold;
 }
 #offerdesc{
     color:rgb(110, 111, 111);
-    font-size: 20px;
-    margin:20px 0px 10px 260px;
+    font-size: 17px;
+    margin:20px 0px 10px 240px;
 }
 #offerboxes{
     display: flex;
-    margin:30px 0px 10px 250px;
+    margin:30px 0px 10px 230px;
 }
 #flights{
     border: 1px solid rgb(188, 187, 187);
     height:200px;
-    width:670px;
+    width:620px;
     border-radius: 12px;
     padding: 10px 10px 10px 10px;
     margin-right: 25px;
 }
 #flights img{
-    width:180px;
+    width:140px;
     height:140px;
     position: absolute; 
-    margin:-70px 20px 0px 310px;
+    margin:-70px 20px 0px 270px;
 }
 #flighthead{
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 30px;
 }
 #flightdesc{
-    margin-top: 20px;
+    margin-top: 18px;
     color:rgb(89, 88, 88);
 }
 #flights button{
@@ -241,20 +249,20 @@
     color:white;
     margin:15px 0px 0px 0px;
     border-radius:10px;
-    font-size: 18px;
+    font-size: 16px;
 }
 #gateway{
-    width:680px;
+    width:600px;
     height:200px;
 }
 #gateway img{
-    width:680px;
+    width:600px;
     height:200px;
     border-radius: 12px;
 }
 #gatehead{
     font-weight: bold;
-    font-size: 22px;
+    font-size: 20px;
     margin: -180px 0px 0px 20px;
     position: absolute;
     color:rgb(252, 251, 251);
@@ -262,28 +270,28 @@
 #gatedesc{
    position: absolute; 
    margin:-150px 0px 0px 20px;
-   font-size: 19px;
-   width:560px;
+   font-size: 16px;
+   width:440px;
    color: white;
 }
 #gateway button{
     position:absolute;
-    margin:140px 0px 0px -660px;
+    margin:110px 0px 0px -580px;
     height: 40px;
     background-color:rgb(50, 50, 248) ;
     border-radius: 5px;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
 #propertytype{
     margin:100px 0px 0px 250px;
 }
 #propertytype h2{
-     font-size: 30px;
+     font-size: 20px;
      font-weight: bold;
 }
 #properties{
-    width:1400px;
+    width:1100px;
     margin-top:40px;
     font-weight: bold;
     overflow-x:scroll;
@@ -292,7 +300,7 @@
     scrollbar-width: none;    
 }
 #properties img{
-    width:320px;
+    width:250px;
     border-radius: 20px;
     margin:5px 20px 5px 10px;
 }
@@ -314,12 +322,12 @@
 }
 #PLeftarrow{
     position:absolute;
-    margin:110px 0px 0px -10px;
+    margin:90px 0px 0px -18px;
     cursor: pointer;
 }
 #PRightarrow{
     position: absolute;
-    margin:110px 0px 0px 1370px;
+    margin:90px 0px 0px 1078px;
     cursor: pointer;
 }
 #Regcontainer{
@@ -327,7 +335,7 @@
   height:650px;
   background-color: rgb(228, 228, 228);
   position: fixed;
-  margin:-1430px 0px 0px 580px;
+  margin:-1530px 0px 0px 520px;
   padding:20px 20px 20px 20px;
   z-index: 2;
   border: 1px solid black;
@@ -341,6 +349,15 @@
     width:360px;
     height:43px;
     margin-left:50px;
+}
+#Rxclose,#Lxclose{
+    width:40px;
+    height: 20px;
+    background-color: red;
+    text-align: center;
+    margin:-20px 0px 0px 439px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
 }
 #signupbut{
     margin:20px 0px 0px 170px;
@@ -357,7 +374,7 @@
   height:650px;
   background-color: rgb(228, 228, 228);
   position: fixed;
-  margin:-1430px 0px 0px 580px;
+  margin:-1530px 0px 0px 520px;
   padding:20px 20px 20px 20px;
   z-index: 2;
   border: 1px solid black;

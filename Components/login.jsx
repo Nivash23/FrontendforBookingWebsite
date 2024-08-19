@@ -85,6 +85,7 @@ function login({ logbut, setLogbut, setRegbut }) {
   return (
     <div class={logbut}>
       <div id="logcontainer">
+        <div id="Lxclose" onClick={()=>{setLogbut('Linactive')}}>x</div>
         <form onsubmit={Guestloghandler}>
           <h4>Sign in or create an account</h4>
 

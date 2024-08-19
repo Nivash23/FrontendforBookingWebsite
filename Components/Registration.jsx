@@ -91,6 +91,7 @@ function Registration({ regbut, setRegbut, setLogbut }) {
   return (
     <div class={regbut}>
       <div id="Regcontainer">
+        <div id="Rxclose" onClick={()=>{setRegbut('Reinactive')}}>x</div>
         <form onSubmit={GuestReghandler}>
           <h4>Sign in or create an account</h4>
 
