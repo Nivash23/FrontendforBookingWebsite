@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useRef } from 'react'
 
 function PropertyType() {
     // const [p1Index, setP1Index] = useState([]);
@@ -91,9 +92,18 @@ function PropertyType() {
         src:"https://r-xx.bstatic.com/xdata/images/xphoto/263x210/45450056.jpeg?k=251e2507d43a24a4c58bb961b8d157147d56efbf91b49f9606bc768c58f581e4&o="
     },
     ]
+
+    const propertycontainerref = useRef();
+
+    const ScrolltoRight = () => {
+        propertycontainerref.current.scrollLeft += 500;
+    }
+    const ScrolltoLeft = () => {
+        propertycontainerref.current.scrollLeft -= 300;
+    }
   return (
-      <div id="properties">
-          <div id="property">
+      <div id="properties" ref={propertycontainerref} >
+          <div id="property" >
               
           {
                   properties.map((val, i) => (
@@ -105,8 +115,8 @@ function PropertyType() {
                       
                   ))
               }
-              <div id="PRightarrow" ><ion-icon name="chevron-forward-outline"></ion-icon></div>
-              <div id="PLeftarrow" ><ion-icon name="chevron-back-outline"></ion-icon></div>
+              <div id="PRightarrow" onClick={ScrolltoRight} ><ion-icon name="chevron-forward-outline"></ion-icon></div>
+              <div id="PLeftarrow" onClick={ScrolltoLeft} ><ion-icon name="chevron-back-outline"></ion-icon></div>
           </div>
           
               

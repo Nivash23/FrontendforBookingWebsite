@@ -3,6 +3,13 @@ import Offers from "../Components/Offers";
 import PropertyType from "../Components/PropertyType";
 import Registration from "../Components/Registration";
 import Login from "../Components/login";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import Stays from "../Components/Stays";
+import Flights from "../Components/Flights";
+import Flightandhotel from "../Components/Flightandhotel";
+import CarRentals from "../Components/CarRentals";
+import Attractions from "../Components/Attractions";
+import AirportTaxi from "../Components/AirportTaxi";
 
 function Bookings() {
   const [regbut, setRegbut] = useState("Reinactive");
@@ -17,208 +24,118 @@ function Bookings() {
     airport: "Rinactive",
   });
 
-  const [inputType, setInputType] = useState("text");
-
-  const handleinputfocus = () => {
-    setInputType("date");
-  };
-  const handleinputblur = () => {
-    setInputType("text");
-  };
   return (
     <div id="body">
-      <div id="navigation">
-        <div id="nav">
-          <div id="logo">Booking.com</div>
-          <div id="menus">
-            <div>INR</div>
-            <div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_India.png/1280px-Flag_of_India.png"></img>
+      <Router>
+        <div id="navigation">
+          <div id="nav">
+            <div id="logo">TravelsBookingWeb</div>
+            <div id="menus">
+              <div>INR</div>
+              <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_India.png/1280px-Flag_of_India.png"></img>
+              </div>
+              <div id="question">
+                <ion-icon name="help-circle-outline"></ion-icon>
+              </div>
+              <div>List your property</div>
+              <button
+                type="button"
+                onClick={() => {
+                  if (regbut == "Reinactive") {
+                    setRegbut("Reactive");
+                    setLogbut("Linactive");
+                  } else {
+                    setRegbut("Reinactive");
+                  }
+                }}
+              >
+                Register
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  if (logbut == "Linactive") {
+                    setLogbut("Lactive");
+                    setRegbut("Reinactive");
+                  } else {
+                    setLogbut("Linactive");
+                  }
+                }}
+              >
+                Sign in
+              </button>
             </div>
-            <div id="question">
-              <ion-icon name="help-circle-outline"></ion-icon>
-            </div>
-            <div>List your property</div>
-            <button
-              type="button"
-              onClick={() => {
-                if (regbut == "Reinactive") {
-                  setRegbut("Reactive");
-                  setLogbut('Linactive')
-                } else {
-                  setRegbut("Reinactive");
-                }
-              }}
-            >
-              Register
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                if (logbut == "Linactive") {
-                  setLogbut("Lactive");
-                  setRegbut('Reinactive');
-                } else {
-                  setLogbut("Linactive");
-                }
-              }}
-            >
-              Sign in
-            </button>
-          </div>
-          <div id="navrouters">
-            <div
-              onClick={() => {
-                setRoutebut({
-                  stays: "Ractive",
-                  flight: "Rinactive",
-                  flihot: "Rinactive",
-                  carrent: "Rinactive",
-                  attraction: "Rinactive",
-                  airport: "Rinactive",
-                });
-              }}
-              class={routebut.stays}
-            >
-              <ion-icon name="bed-outline"></ion-icon>Stays
-            </div>
-            <div
-              onClick={() => {
-                setRoutebut({
-                  stays: "Rinactive",
-                  flight: "Ractive",
-                  flihot: "Rinactive",
-                  carrent: "Rinactive",
-                  attraction: "Rinactive",
-                  airport: "Rinactive",
-                });
-              }}
-              class={routebut.flight}
-            >
-              <ion-icon name="airplane-outline"></ion-icon> Flights
-            </div>
-            <div
-              onClick={() => {
-                setRoutebut({
-                  stays: "Rinactive",
-                  flight: "Rinactive",
-                  flihot: "Ractive",
-                  carrent: "Rinactive",
-                  attraction: "Rinactive",
-                  airport: "Rinactive",
-                });
-              }}
-              class={routebut.flihot}
-            >
-              <ion-icon name="baseball-outline"></ion-icon>Flight + Hotel
-            </div>
-            <div
-              onClick={() => {
-                setRoutebut({
-                  stays: "Rinactive",
-                  flight: "Rinactive",
-                  flihot: "Rinactive",
-                  carrent: "Ractive",
-                  attraction: "Rinactive",
-                  airport: "Rinactive",
-                });
-              }}
-              class={routebut.carrent}
-            >
-              <ion-icon name="car-sport-outline"></ion-icon>Car rentals
-            </div>
-            <div
-              onClick={() => {
-                setRoutebut({
-                  stays: "Rinactive",
-                  flight: "Rinactive",
-                  flihot: "Rinactive",
-                  carrent: "Rinactive",
-                  attraction: "Ractive",
-                  airport: "Rinactive",
-                });
-              }}
-              class={routebut.attraction}
-            >
-              <ion-icon name="football-outline"></ion-icon>Attractions
-            </div>
-            <div
-              onClick={() => {
-                setRoutebut({
-                  stays: "Rinactive",
-                  flight: "Rinactive",
-                  flihot: "Rinactive",
-                  carrent: "Rinactive",
-                  attraction: "Rinactive",
-                  airport: "Ractive",
-                });
-              }}
-              class={routebut.airport}
-            >
-              <ion-icon name="car-outline"></ion-icon>Airport taxis
+            <div id="navrouters">
+              <Link to="/stays" style={{textDecoration:"none", color:"white"}}>
+                <div class={routebut.stays}>
+                  <ion-icon name="bed-outline"></ion-icon>Stays
+                </div>
+              </Link>
+              <Link to="/flights" style={{textDecoration:"none", color:"white"}} >
+              
+              <div
+                class={routebut.flight}
+              >
+                <ion-icon name="airplane-outline"></ion-icon> Flights
+              </div>
+              </Link>
+              <Link to="/flightandhotel" style={{ textDecoration: "none", color: "white" }} >
+              
+              <div
+                
+                class={routebut.flihot}
+              >
+                <ion-icon name="baseball-outline"></ion-icon>Flight + Hotel
+              </div>
+              </Link>
+              <Link to="/carrentals" style={{ textDecoration: "none", color: "white" }} >
+              
+              <div
+                
+                class={routebut.carrent}
+              >
+                <ion-icon name="car-sport-outline"></ion-icon>Car rentals
+              </div>
+              </Link>
+              <Link to="/attractions" style={{ textDecoration: "none", color: "white" }} >
+              
+              <div
+                
+                class={routebut.attraction}
+              >
+                <ion-icon name="football-outline"></ion-icon>Attractions
+              </div>
+              </Link>
+              <Link to="/airporttaxis" style={{ textDecoration: "none", color: "white" }} >
+              
+              <div class={routebut.airport}>
+                <ion-icon name="car-outline"></ion-icon>Airport taxis
+              </div>
+              </Link>
             </div>
           </div>
         </div>
-      </div>
-      <div id="bodybackimg">
-        <img src="https://png.pngtree.com/background/20230424/original/pngtree-couple-sitting-on-the-hill-picture-image_2459275.jpg"></img>
-        <div id="htextinimg">A piece of paradise just for you </div>
-        <div id="ptextinimg">Book entire houses,villas,cabins and more </div>
-
-        <div id="discoverbut">Discover holiday rentals</div>
-      </div>
-      <div id="inputdetails">
-        <div id="inputplace">
-          <ion-icon name="bed-outline"></ion-icon>
-          <input type="text" placeholder="Where are you going?" />
-        </div>
-        <div id="inputdate">
-          <input
-            type={inputType}
-            placeholder="Check-in date"
-            onFocus={handleinputfocus}
-            onBlur={handleinputblur}
-          />{" "}
-          --{" "}
-          <input
-            type={inputType}
-            placeholder="Check-out date"
-            onFocus={handleinputfocus}
-            onBlur={handleinputblur}
-          />
-        </div>
-        <div id="inputmembers">
-          <ion-icon name="person-outline"></ion-icon>
-          <input type="text" placeholder="2 Adults. 0 children . 1 room" />
-        </div>
-        <button id="search" type="submit">
-          Search
-        </button>
-        {/* <div id="ibedicon"></div> */}
-        {/* <div id="iusericon"></div> */}
-      </div>
-      <div id="checkboxforflight">
-        <input type="checkbox" />
-        I'm looking for flights
-      </div>
-
-      <div id="offers">
-        <h2>Offers</h2>
-        <Offers />
-      </div>
-      <div id="propertytype">
-        <h2>Browse by property type</h2>
-        <PropertyType />
-      </div>
       <div id="Registration">
-        <Registration regbut={regbut} setRegbut={setRegbut} setLogbut={setLogbut} />
+        <Registration
+          regbut={regbut}
+          setRegbut={setRegbut}
+          setLogbut={setLogbut}
+        />
       </div>
       <div>
         <Login logbut={logbut} setLogbut={setLogbut} setRegbut={setRegbut} />
       </div>
-      <div id="exploreIndia">
-        <div>Explore India</div>
-      </div>
+        <Routes>
+          <Route path="/"  element={<Stays routebut={routebut} setRoutebut={setRoutebut} />}/>
+          <Route path="/stays"  element={<Stays routebut={routebut} setRoutebut={setRoutebut} />}/>
+          <Route path="/flights"  element={<Flights routebut={routebut} setRoutebut={setRoutebut} />}/>
+          <Route path="/flightandhotel"  element={<Flightandhotel routebut={routebut} setRoutebut={setRoutebut} />}/>
+          <Route path="/carrentals"  element={<CarRentals routebut={routebut} setRoutebut={setRoutebut} />}/>
+          <Route path="/attractions"  element={<Attractions routebut={routebut} setRoutebut={setRoutebut} />}/>
+          <Route path="/airporttaxis"  element={<AirportTaxi routebut={routebut} setRoutebut={setRoutebut} />}/>
+        </Routes>
+          </Router>
     </div>
   );
 }

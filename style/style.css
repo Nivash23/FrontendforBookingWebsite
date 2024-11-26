@@ -1,0 +1,186 @@
+
+#AirRecommendContainer{
+   margin:120px 0px 0px 160px;
+}
+#AirRecommendContainer #head{
+    margin:40px 0px 10px 380px;
+    font-weight: bold;
+    font-size: 24px;
+}
+#AirRecommendContainer #options{
+    display:flex;
+    margin:50px 0px 10px 20px;
+    border-radius: 10px;
+    width:423px;
+    border:2px solid blueviolet;
+    /* height:37px; */
+}
+#AirRecommendContainer svg{
+    margin-right: 10px;
+}
+#options div{
+    width:140px;
+    height:40px;
+    text-align: center;
+    padding-top: 5px;
+    /* color:blue; */
+    cursor:pointer;
+    /* border-radius: 5px; */
+}
+#opt1,#opt2{
+    border-right:2px solid blueviolet;
+}
+.Airopt1inactive{
+  #opt1statecontainer{
+    display:none;
+  }
+}
+.Airopt2inactive{
+  #opt2statecontainer{
+    display:none;
+  }
+}
+.Airopt1active{
+  #opt1{
+
+    background-color: blueviolet;
+    color: white;
+  }
+  #opt1statecontainer{
+    /* display: flex; */
+    display: block;
+  }
+}
+.Airopt2active{
+  #opt2{
+
+    background-color: blueviolet;
+    color: white;
+  }
+  
+  #opt2statecontainer{
+    display:block;
+  }
+}
+.Airopt3active{
+  background-color: blueviolet;
+  color: white;
+}
+#opt1statecontainer{
+    margin:50px 0px 10px 0px;
+    display: flex;
+    /* display:none; */
+}
+#opt1statecontainer .head{
+    font-weight: bold;
+    margin:10px 0px 10px 15px;
+    font-size: 18px;
+}
+#opt1statecontainer .desc{
+    color:rgb(102, 101, 101);
+    margin:-12px 0px 10px 15px;
+    font-size: 15px;
+}
+#opt1statecontainer .lists{
+    margin:10px 0px 40px 60px;
+}
+#opt1statecontainer .button{
+    width:80px;
+    height:30px;
+    margin:20px 0px 10px 50px;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 3px;
+    cursor: pointer;
+}
+#opt1statecontainer > div{
+  border-radius: 10px;
+  width:580px;
+  height:250px;
+  background-color: white;
+  margin:10px 20px 10px 10px;
+}
+#opt2statecontainer{
+    /* display:block; */
+    display:flex;
+    display:none;
+
+}
+#opt2statecontainer .head{
+    font-weight: bold;
+    margin:10px 0px 10px 15px;
+    font-size: 18px;
+}
+#opt2statecontainer .desc{
+    color:rgb(102, 101, 101);
+    margin:-12px 0px 10px 15px;
+    font-size: 15px;
+}
+#opt2statecontainer .lists{
+    margin:10px 0px 10px 60px;
+}
+#opt2statecontainer .button{
+    width:80px;
+    height:30px;
+    margin:20px 0px 10px 50px;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 3px;
+    cursor: pointer;
+}
+#opt2statecontainer > div{
+  border-radius: 10px;
+  width:580px;
+  height:250px;
+  background-color: white;
+  margin:10px 20px 10px 10px;
+}
+#Fandhhotdesticontainer{
+    margin:20px 0px 10px 140px;
+}
+#Fandhhotdesticontainer #head{
+    margin:70px 0px 10px 40px;
+    font-weight: bold; 
+    font-size: 22px;
+}
+#Fandhhotdesticontainer #destinations{
+    display:flex;
+    margin:30px 0px 10px 50px;
+}
+#destinations div{
+    width:300px;
+    height:250px;
+    margin:20px 20px 20px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+#Fandhdestiimg1 img:hover{
+    
+        zoom: 1.005;
+        transform: scale(1.005);
+        transition: 3s;
+}
+#Fandhdestiimg2 img:hover{
+    
+        zoom: 1.005;
+        transform: scale(1.005);
+        transition: 3s;
+}
+#Fandhdestiimg3 img:hover{
+   
+        zoom: 1.005;
+        transform: scale(1.005);
+        transition: 3s;
+}
+#destinations img{
+    width:300px;
+    height:250px;
+    border-top-left-radius: 220px;
+    border-top-right-radius: 220px;
+    border-bottom-left-radius: 240px;
+    /* border-radius: 205px; */
+}

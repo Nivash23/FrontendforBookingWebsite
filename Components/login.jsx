@@ -117,7 +117,7 @@ function login({ logbut, setLogbut, setRegbut }) {
               }}
             />
           </div>
-          <button type="submit" class="signupbut" onClick={Guestloghandler}>
+          <button type="submit" class="signinbut" onClick={Guestloghandler}>
             Sign in
           </button>
         </form>

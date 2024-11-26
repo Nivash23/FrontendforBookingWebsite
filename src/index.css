@@ -54,14 +54,14 @@
 }
 
 #logo{
-    margin:1.2rem 28rem 0rem 12.4rem;
+    margin:1.2rem 28rem 0rem 11rem;
     font-size: 1.5rem; 
     font-weight: bold;
 }
 #navrouters{
     display: flex;
     position: absolute;
-    margin:6.2rem 0rem 0rem 12.4rem;
+    margin:6.2rem 0rem 0rem 11rem;
     font-size: 1.2rem;
     transition: 2s;
    
@@ -70,9 +70,22 @@
     margin-right: 4.3rem;
     padding:0.3rem 0.6rem 0.6rem 0.6rem;
     cursor: pointer;
+    
+    
+    /* text-decoration: none; */
     /* width:170px;
      height:70px; */
 }
+.routepagehead{
+    font-size: 28px;
+    font-weight: bold;
+    margin:20px 0px 10px 170px;
+}
+.routepageheaddesc{
+    margin-left:170px;
+}
+
+
 #navrouters div:hover{
     background-color: rgb(50, 50, 177);
 }
@@ -112,13 +125,14 @@
     padding:1.2rem 1rem 1.2rem 1rem;
     font-size: 1rem;
     color: white;
-    width:11rem;
+    width:13rem;
     border-radius: 5px;
     position: absolute;
     margin:-10rem 0rem 0rem 12.4rem;
     z-index: 1;
+    cursor: pointer;
 }
-#inputdetails input{
+#Staysinputdetails input{
     /* position: absolute; */
     width:290px;
     height:30px;
@@ -132,24 +146,24 @@
 
 
 }
-#inputdetails ion-icon{
+#Staysinputdetails ion-icon{
     font-size: 25px;
     margin:18px 15px 0px 10px;
 }
 
-#inputdetails input::placeholder{
+#Staysinputdetails input::placeholder{
     font-size: 20px;
 }
 /* #iusericon{
     position: absolute;
 } */
-#inputdetails{
+#Staysinputdetails{
     display: flex;
     position: absolute;
     /* padding:5px 5px 5px 5px; */
     margin:-40px 0px 0px 230px;
 }
-#inputplace{
+ #Staysinputdetails #inputplace{
     display: flex;
     width:340px;
     height:60px;
@@ -162,7 +176,7 @@
     /* padding:5px 5px 5px 5px; */
 
 }
-#inputmembers{
+#Staysinputdetails #inputmembers{
     display: flex;
     width:340px;
     height:60px;
@@ -173,17 +187,18 @@
 
 
 }
-#inputdate{
+#Staysinputdetails #inputdate{
+    display:flex;
     padding: 20px 5px 0px 5px;
-    height: 40px;
+    height: 60px;
     background-color: white;
     border:5px solid orange;
    
 
 }
-#search{
+#Staysinputdetails #search{
     width:110px;
-    height: 70px;
+    height: 60px;
     font-size: 16px;
      border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -192,9 +207,439 @@
     color:white;
 
 }
-#inputdate input{
+#staysrentdate{
+    margin:50px 0px 0px 500px;
+    position:absolute;
+    z-index: 1;
+}
+.StaysCalinactive{
+    #staysrentdate{
+        display:none;
+    }
+}
+.StaysCalactive{
+    #staysrentdate{
+        display: block;
+    }
+}
+#Flightsinputdetails input{
+    /* position: absolute; */
+    width:290px;
+    height:40px;
+    border: none;
+    outline: none;
+    margin:10px 0px 10px 10px;
+    font-size: 20px;
+
+     /* margin-top: 0px;  */
+     /* margin-top: -180px; */
+
+
+
+}
+#Flightsinputdetails ion-icon{
+    font-size: 23px;
+    margin:15px 15px 0px 10px;
+    color:rgb(118, 118, 118);
+}
+
+#Flightsinputdetails input::placeholder{
+    font-size: 20px;
+}
+/* #iusericon{
+    position: absolute;
+} */
+#Flightsinputdetails{
+    display: flex;
+    position: absolute;
+    /* padding:5px 5px 5px 5px; */
+    margin:40px 0px 0px 160px;
+}
+ #Flightsinputdetails #Finputplace{
+    display: flex;
+    width:210px;
+    height:60px;
+    background-color: white;
+    border:5px solid orange;
+    /* margin:-50px 0px 0px 30px; */
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* padding:5px 5px 5px 5px; */
+
+}
+#Finputplace input{
+    width:140px;
+}
+
+#Flightsinputdetails #Finputmembers{
+    display: flex;
+    width:300px;
+    height:60px;
+    background-color: white;
+    border:5px solid orange;
+    /* border-radius: 10px; */
+   
+
+
+}
+#Finputmembers input{
+    width:170px;
+}
+#Flightsinputdetails #Finputdate{
+    display:flex;
+    padding: 20px 5px 0px 5px;
+    height: 60px;
+    background-color: white;
+    border:5px solid orange;
+    width:400px;
+   
+
+}
+#Finputdate input{
+    width:170px;
+    margin-top: -10px;
+}
+#Flightsinputdetails #inputToplace{
+    width:200px;
+    height:60px;
+    background-color: white;
+    border:5px solid orange;
+}
+#Flightsinputdetails #inputhipen{
+    width:30px;
+}
+#inputToplace input{
+    width:180px;
+}
+#Flightsinputdetails #search{
+    width:110px;
+    height: 60px;
+    font-size: 16px;
+     border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border:5px solid orange;
+    background-color: rgb(52, 52, 249);
+    color:white;
+
+}
+#FPopularlistcontainer{
+    margin:130px 0px 10px 170px;
+}
+#FPopularlistcontainer #Foptions{
+    display:flex;
+    margin:20px 0px 10px 10px;
+}
+#Foptions div{
+    margin:10px 20px 10px 10px;
+    border:1px solid blue;
+    padding:8px 8px 8px 8px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+#FPopularhead{
+    font-weight: bold;
+    font-size: 22px;
+}
+#FPopulardesc{
+    margin-top: 10px;
+    font-size: 19px;
+    color:rgb(85, 84, 84);
+}
+#Fpopularcardcontainer{
+    height:200px;
+}
+#Popularflightslistcontainer{
+    margin:60px 0px 20px 50px;
+    width:1020px;
+}
+#Popularflightsimage img{
+    width:200px;
+    height:150px;
+    border-radius: 5px;
+}
+#Popularflightsplace{
+    font-weight: bold;
+}
+#Rentinputdetails input{
+    /* position: absolute; */
+    width:290px;
+    height:40px;
+    border: none;
+    outline: none;
+    margin:10px 0px 10px 10px;
+    font-size: 20px;
+
+     /* margin-top: 0px;  */
+     /* margin-top: -180px; */
+
+
+
+}
+#Rentinputdetails ion-icon{
+    font-size: 25px;
+    margin:15px 15px 0px 10px;
+}
+
+#Rentinputdetails input::placeholder{
+    font-size: 20px;
+}
+/* #iusericon{
+    position: absolute;
+} */
+#Rentinputdetails{
+    display: flex;
+    position: absolute;
+    /* padding:5px 5px 5px 5px; */
+    margin:50px 0px 0px 160px;
+}
+ #Rentinputdetails #Rentinputplace{
+    display: flex;
+    width:210px;
+    height:60px;
+    background-color: white;
+    border:5px solid orange;
+    /* margin:-50px 0px 0px 30px; */
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* padding:5px 5px 5px 5px; */
+
+}
+#Rentinputplace input{
+    width:140px;
+}
+
+#Rentinputdetails #Rentinputmembers{
+    display: flex;
+    width:300px;
+    height:60px;
+    background-color: white;
+    border:5px solid orange;
+    /* border-radius: 10px; */
+   
+
+
+}
+#Rentinputmembers input{
+    width:170px;
+}
+#Rentinputdetails #Rentinputdate{
+    display:flex;
+    padding: 18px 5px 0px 5px;
+    height: 60px;
+    background-color: white;
+    border:5px solid orange;
+    width:400px;
+   
+
+}
+#Rentinputdate input{
+    width:170px;
+    margin-top: -10px;
+}
+
+#Rentinputdetails #RentinputToplace{
+    width:200px;
+    height:60px;
+    background-color: white;
+    border:5px solid orange;
+}
+#Rentinputdetails #Rentinputhipen{
+    width:30px;
+}
+#RentinputToplace input{
+    width:180px;
+}
+#Rentinputdetails #search{
+    width:110px;
+    height: 60px;
+    font-size: 16px;
+     border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border:5px solid orange;
+    background-color: rgb(52, 52, 249);
+    color:white;
+
+}
+#Renthiredestination{
+    margin:140px 0px 10px 150px;
+}
+#Renthiredestination #head{
+    font-weight: bold;
+    font-size: 22px;
+    margin:10px 0px 0px 15px;
+}
+#Renthiredestination #desc{
+    font-size:17px;
+    margin: 10px 0px 0px 15px;
+    color:rgb(107, 106, 106);
+}
+#Renthiredestination #buttonsoptions{
+    display:flex;
+    margin:20px 0px 10px 30px;
+}
+#buttonsoptions div{
+    margin-right: 20px;
     width:150px;
-    margin:0px 20px 0px 20px;
+    height:50px;
+    border:1px solid rgb(105, 105, 235);
+    padding:10px 5px 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#Carhiredestinations{
+    margin:30px 0px 10px 60px  ;
+    width:800px;
+}
+#Carhiredestinationname{
+    font-weight: bold;
+    margin:7px 0px 5px 35px;
+}
+#Carhiredestinationavailable
+{
+    margin:3px 0px 5px 18px;
+}
+#Carhiredestinationprice
+{
+    margin:3px 0px 5px 35px;
+}
+#Carhiredestinationimage img{
+    width:180px;
+    height:150px;
+    border-radius: 7px;
+}
+
+#Airporttaxicontainer #Airrootechoice{
+    display:flex;
+    margin:20px 0px 10px 190px;
+}
+#Airrootechoice div{
+    margin:0px 20px 0px 0px;
+}
+#Airrootechoice input{
+    margin:12px 10px 0px 0px;
+    width:20px;
+    height:20px;
+}
+#Airportinputdetails input{
+    /* position: absolute; */
+    width:290px;
+    height:40px;
+    border: none;
+    outline: none;
+    margin:10px 0px 10px 10px;
+    font-size: 20px;
+
+     /* margin-top: 0px;  */
+     /* margin-top: -180px; */
+
+
+
+}
+#Airportinputdetails ion-icon{
+    font-size: 25px;
+    margin:18px 15px 0px 10px;
+}
+
+#Airportinputdetails input::placeholder{
+    font-size: 20px;
+}
+/* #iusericon{
+    position: absolute;
+} */
+#Airportinputdetails{
+    display: flex;
+    position: absolute;
+    /* padding:5px 5px 5px 5px; */
+    margin:10px 0px 0px 165px;
+}
+ #Airportinputdetails #Airportinputplace{
+    display: flex;
+    width:210px;
+    height:60px;
+    background-color: white;
+    border:5px solid orange;
+    /* margin:-50px 0px 0px 30px; */
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* padding:5px 5px 5px 5px; */
+
+}
+#Airportinputplace input{
+    width:145px;
+}
+
+#Airportinputdetails #Airportinputmembers{
+    display: flex;
+    width:300px;
+    height:60px;
+    background-color: white;
+    border:5px solid orange;
+    /* border-radius: 10px; */
+   
+
+
+}
+#Airportinputmembers input{
+    width:170px;
+}
+#Airportinputdetails #Airportinputdate{
+    display:flex;
+    padding: 18px 5px 0px 5px;
+    height: 60px;
+    background-color: white;
+    border:5px solid orange;
+    width:400px;
+   
+
+}
+#Airportinputdate input{
+    width:170px;
+    margin-top: -10px;
+}
+#Airportinputdetails #AirportinputToplace{
+    width:200px;
+    height:60px;
+    background-color: white;
+    border:5px solid orange;
+}
+#Airportinputdetails #Airportinputhipen{
+    width:30px;
+}
+#AirportinputToplace input{
+    width:180px;
+}
+#Airportinputdetails #search{
+    width:110px;
+    height: 60px;
+    font-size: 16px;
+     border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border:5px solid orange;
+    background-color: rgb(52, 52, 249);
+    color:white;
+
+}
+#Airportrentdate{
+    margin:100px 0px 0px 400px;
+    position: absolute;
+}
+.AirportCalinactive{
+    #Airportrentdate{
+        display:none;
+    }
+}
+.AirportCalactive{
+    #Airportrentdate{
+        display:block;
+    }
+}
+
+#inputdate input{
+    width:160px;
+    margin:-5px 20px 0px 20px;
 }
 #checkboxforflight input{
     margin: 60px 10px 0px 240px;
@@ -222,7 +667,7 @@
 }
 #flights{
     border: 1px solid rgb(188, 187, 187);
-    height:180px;
+    height:205px;
     width:600px;
     border-radius: 12px;
     padding: 10px 10px 10px 10px;
@@ -298,12 +743,13 @@
     overflow-x:scroll;
     overflow-y:hidden;
     height: 350px;
-    scrollbar-width: none;    
+    scrollbar-width: none;
 }
 #properties img{
     width:250px;
     border-radius: 20px;
     margin:5px 20px 5px 10px;
+    cursor: pointer;
 }
 #propertyname{
     font-size: 20px;
@@ -333,10 +779,10 @@
 }
 #Regcontainer{
   width:500px;
-  height:600px;
+  height:670px;
   background-color: rgb(228, 228, 228);
   position: fixed;
-  margin:-1530px 0px 0px 520px;
+  margin:-130px 0px 0px 520px;
   padding:20px 20px 20px 20px;
   z-index: 2;
   border: 1px solid black;
@@ -360,15 +806,17 @@
     height: 20px;
     background-color: red;
     text-align: center;
-    margin:-20px 0px 0px 480px;
+    margin:-20px 0px 0px 439px;
     border-top-right-radius: 10px;
     cursor: pointer;
 }
-#signupbut{
-    margin:20px 0px 0px 290px;
+.signupbut{
+    margin:20px 0px 0px 200px;
     background-color: rgb(50, 50, 248);
     color:azure;
-
+    padding:7px 7px 7px 7px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 #orsplit{
     width:600px;
@@ -376,10 +824,10 @@
 }
 #logcontainer{
   width:500px;
-  height:600px;
+  height:670px;
   background-color: rgb(228, 228, 228);
   position: fixed;
-  margin:-1530px 0px 0px 520px;
+  margin:-130px 0px 0px 520px;
   padding:20px 20px 20px 20px;
   z-index: 2;
   border: 1px solid black;
@@ -391,17 +839,20 @@
 }
 #logcontainer label,h4{
     font-weight: bold;
-    margin:50px 0px 10px 50px;
+    margin:20px 0px 10px 50px;
 }
 #logcontainer input{
     width:360px;
     height:43px;
-     margin:30px 0px 20px 50px;
+     margin:30px 0px 10px 50px;
 }
-.signupbut{
+.signinbut{
     margin:20px 0px 0px 200px;
     background-color: rgb(50, 50, 248);
     color:azure;
+    padding:7px 7px 7px 7px;
+    cursor: pointer;
+    border-radius: 5px;
 
 }
 .containerswitches{
@@ -443,6 +894,162 @@
     margin:40px 0px 0px 100px;
     
 }
+#Fandhinputdetails{
+    width:1100px;
+    height:80px;
+    background-color: rgb(246, 246, 249);
+    margin:50px 0px 0px 180px;
+    border:4px solid orange;
+    border-radius: 10px;
+    display: flex;
+    padding:10px 10px 10px 10px;
+}
+#Fandhroutecontainerhead{
+    padding:20px 10px 40px 10px;
+}
+#Fandhinputdetails>div{
+    width:240px;
+    height:50px;
+    background-color: #e5e6e6d1;
+    margin:0px 10px 10px 0px;
+    border-radius: 5px;
+    padding:0px 5px 5px 10px;
+    cursor: pointer;
+}
+#Fandhinputdetails #search{
+    width:40px;
+    height:50px;
+    border-radius: 15px;
+    background-color: blue;
+    text-align: center;
+    padding:10px 10px 0px 10px;
+}
+#Fandhinputdetails ion-icon{
+    font-size: 22px;
+    color:white;
+    margin-top: 10px;
+}
+#Fandhinputdetails input{
+    height:22px;
+    width:210px;
+    margin-top:5px;
+    border:none;
+    outline: none;
+    background-color:#e5e6e6d1;
+
+}
+#Fandhinputdetails input::placeholder{
+    font-size:15px;
+}
+#Fandhinputdetails .inputhead{
+    color:rgb(137, 137, 137);
+}
+#Attractinputdetails{
+    width:1100px;
+    height:60px;
+    background-color: rgb(246, 246, 249);
+    margin:50px 0px 0px 180px;
+    border:4px solid orange;
+    border-radius: 10px;
+    display: flex;
+    /* padding:10px 10px 10px 10px; */
+}
+#Attractinputdetails>div{
+    width:505px;
+    height:52px;
+    background-color: #e5e6e6d1;
+    margin:0px 0px 0px 0px;
+    /* border-radius: 5px; */
+    padding:10px 5px 5px 10px;
+    cursor: pointer;
+}
+#Attractinputdetails #search{
+     width:110px;
+    height: 53px;
+    font-size: 16px;
+     border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-left:4px solid orange;
+    background-color: rgb(52, 52, 249);
+    color:white;
+    cursor: pointer;
+    outline: none;
+}
+#Attractinputdetails input{
+    width:430px;
+    height:45px;
+    border: none;
+    outline: none;
+    margin:-5px 0px 0px 0px;
+    font-size: 20px;
+    background-color: #e5e6e6d1;
+
+}
+#Adestinationinput{
+    display:flex;
+    border-right: 1px solid black;
+}
+#Adestinationinput ion-icon{
+    margin:7px 10px 0px 0px;
+    font-size: 23px;
+}
+#Adateinput{
+    display: flex;
+}
+#Attractrentdate{
+    margin:20px 0px 0px 600px;
+    position: absolute;
+}
+.AttractCalinactive{
+    #Attractrentdate{
+        display:none;
+    }
+}
+.AttractCalactive{
+    #Attractrentdate{
+        display:block;
+    }
+}
+
+#Adateinput ion-icon{
+   margin:7px 10px 0px 0px;
+   font-size: 23px;
+}
+#ARecomendhead{
+    margin:50px 0px 10px 170px;
+    font-size: 25px;
+    font-weight: bold;
+}
+#ARecommendcards{
+    margin:50px 100px 0px 180px;
+}
+#Arecommendplaceimage img{
+    width:230px;
+    height:230px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+#Arecommendplacename{
+    font-weight: bold;
+}
+
+#carrentdate{
+    position:absolute;
+    margin:90px 0px 0px 500px;
+}
+
+.CarCalinactive{
+    #carrentdate{
+        display:none;
+    }
+}
+.CarCalactive{
+    #carrentdate{
+        display:block;
+    }
+}
+
+
 
 
 @media (min-width:1200px) and (max-width:1450px)
