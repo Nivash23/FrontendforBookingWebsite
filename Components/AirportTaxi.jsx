@@ -1,30 +1,32 @@
 import React, { useEffect, useState } from "react";
 import Calendar from "../Components/calendar";
 import { format } from "date-fns";
-import '../style/style.css'
-import AirRecomendCards from '../Components/AirRecomendCards'
+import "../style/style.css";
+import AirRecomendCards from "../Components/AirRecomendCards";
 
 function AirportTaxi({ routebut, setRoutebut }) {
   const [calendarstate, setCalendarstate] = useState("AirportCalinactive");
   const [state, setState] = useState({
     startDate: new Date(),
-    endDate:new Date(),
+    endDate: new Date(),
     key: "selection",
   });
 
   const [airRecomoptstates, setAirRecomoptstates] = useState({
     opt1state: "Airopt1active",
     opt2state: "Airopt2inactive",
-    opt3state:"Airopt3inactive"
-  })
+    opt3state: "Airopt3inactive",
+    opt1butstate: "Airopt1butactive",
+    opt2butstate: "Airopt2butinactive",
+    opt3butstate: "Airopt3butinactive",
+  });
 
   const handleFocusselection = () => {
-    setCalendarstate('AirportCalactive')
-  }
+    setCalendarstate("AirportCalactive");
+  };
   const handleblurselection = () => {
-    setCalendarstate('AirportCalinactive');
-  }
-  
+    setCalendarstate("AirportCalinactive");
+  };
 
   const [inputType, setInputType] = useState("text");
 
@@ -77,16 +79,13 @@ function AirportTaxi({ routebut, setRoutebut }) {
               //   }
               // }}
               onFocus={handleFocusselection}
-             onClick={() => {
-          if (calendarstate == 'AirportCalinactive')
-          {
-            setCalendarstate('AirportCalactive')
-
-          }
-          else {
-            setCalendarstate('AirportCalinactive')
-          }
-        }}
+              onClick={() => {
+                if (calendarstate == "AirportCalinactive") {
+                  setCalendarstate("AirportCalactive");
+                } else {
+                  setCalendarstate("AirportCalinactive");
+                }
+              }}
             >
               <div>
                 <input
@@ -129,47 +128,66 @@ function AirportTaxi({ routebut, setRoutebut }) {
             <div id="head">Airport Taxis for any kind of trip</div>
 
             <div id="options">
-              <div id="opt1" class={airRecomoptstates.opt1state} onClick={() =>
-              {
-                if (airRecomoptstates.opt1state == "Airopt1inactive")
-                {
-                  setAirRecomoptstates({
-                    opt1state: "Airopt1active",
-                    opt2state:"Airopt2inactive",
-                    opt3state:"Airopt3inactive"
-                  })
-                }
-                }
-               } >1-3 Passengers</div>
-               <div id="opt2"  onClick={() =>
-              {
-                if (airRecomoptstates.opt2state == "Airopt2inactive")
-                {
-                  setAirRecomoptstates({
-                    opt1state: "Airopt1inactive",
-                    opt2state:"Airopt2active",
-                    opt3state:"Airopt3inactive"
-                  })
-                }
-                }
-               } >4-7 Passengers</div>
-               <div onClick={() =>
-              {
-                if (airRecomoptstates.opt3state == "Airopt3inactive")
-                {
-                  setAirRecomoptstates({
-                    opt1state: "Airopt1inactive",
-                    opt2state:"Airopt2inactive",
-                    opt3state:"Airopt3active"
-                  })
-                }
-                }
-               } >All taxis</div>
-              
-
+              <div
+                id="opt1"
+                class={airRecomoptstates.opt1butstate}
+                onClick={() => {
+                  if (airRecomoptstates.opt1state == "Airopt1inactive") {
+                    setAirRecomoptstates({
+                      opt1state: "Airopt1active",
+                      opt2state: "Airopt2inactive",
+                      opt3state: "Airopt3inactive",
+                      opt1butstate: "Airopt1butactive",
+                      opt2butstate: "Airopt2butinactive",
+                      opt3butstate: "Airopt3butinactive"
+                    });
+                  }
+                }}
+              >
+                1-3 Passengers
+              </div>
+              <div
+                id="opt2"
+                class={airRecomoptstates.opt2butstate}
+                onClick={() => {
+                  if (airRecomoptstates.opt2state == "Airopt2inactive") {
+                    setAirRecomoptstates({
+                      opt1state: "Airopt1inactive",
+                      opt2state: "Airopt2active",
+                      opt3state: "Airopt3inactive",
+                      opt1butstate: "Airopt1butinactive",
+                      opt2butstate: "Airopt2butactive",
+                      opt3butstate: "Airopt3butinactive"
+                    });
+                  }
+                }}
+              >
+                4-7 Passengers
+              </div>
+              <div
+                class={airRecomoptstates.opt3butstate}
+                onClick={() => {
+                  if (airRecomoptstates.opt3state == "Airopt3inactive") {
+                    setAirRecomoptstates({
+                      opt1state: "Airopt1inactive",
+                      opt2state: "Airopt2inactive",
+                      opt3state: "Airopt3active",
+                      opt1butstate: "Airopt1butinactive",
+                      opt2butstate: "Airopt2butinactive",
+                      opt3butstate: "Airopt3butactive"
+                    });
+                  }
+                }}
+              >
+                All taxis
+              </div>
             </div>
             <div>
-               <AirRecomendCards opt1state={airRecomoptstates.opt1state} opt2state={airRecomoptstates.opt2state} opt3state={airRecomoptstates.opt3state} />
+              <AirRecomendCards
+                opt1state={airRecomoptstates.opt1state}
+                opt2state={airRecomoptstates.opt2state}
+                opt3state={airRecomoptstates.opt3state}
+              />
             </div>
           </div>
         </div>

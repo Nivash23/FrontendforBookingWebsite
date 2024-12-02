@@ -126,7 +126,7 @@ function CarRentals({ routebut, setRoutebut }) {
             {
               carhiredestinations.map((val, i) =>
                 
-                <div class="col-md-4">
+                <div class="col-md-3">
                   <CarhireCard imgsrc={val.src} name={val.name} price={val.Averageprice} cars={val.cars} />
                 </div>
   

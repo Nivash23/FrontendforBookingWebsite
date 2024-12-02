@@ -49,15 +49,20 @@ function Flightandhotel({ routebut, setRoutebut }) {
         <div id="head">Discover our hotest destination</div>
         <div id="destinations">
           <div id="Fandhdestiimg1">
-            <img  src="https://res.cloudinary.com/lastminute-contenthub/image/upload/c_lfill,ar_10:6/c_limit,w_768,h_999999/q_auto:best/f_auto/v1/DAM/Photos/Other/Sports/twenty20_e819bc78-f04a-4f3e-99d3-532ee7281146-v502.jpg"/>
+            <div><img src="https://res.cloudinary.com/lastminute-contenthub/image/upload/c_lfill,ar_10:6/c_limit,w_768,h_999999/q_auto:best/f_auto/v1/DAM/Photos/Other/Sports/twenty20_e819bc78-f04a-4f3e-99d3-532ee7281146-v502.jpg" /></div>
           </div>
           <div id="Fandhdestiimg2">
-            <img  src="https://res.cloudinary.com/lastminute-contenthub/image/upload/c_lfill,ar_10:6/c_limit,w_768,h_999999/q_auto:best/f_auto/v1/DAM/Photos/Destinations/Asia/India/Goa/shutterstock_1918710530.jpg"/>
+            <div><img src="https://res.cloudinary.com/lastminute-contenthub/image/upload/c_lfill,ar_10:6/c_limit,w_768,h_999999/q_auto:best/f_auto/v1/DAM/Photos/Destinations/Asia/India/Goa/eyeem-23764952-123550096.jpg" /></div>
+            
           </div>
           <div id="Fandhdestiimg3">
-            <img  src="https://res.cloudinary.com/lastminute-contenthub/image/upload/c_lfill,ar_10:6/c_limit,w_768,h_999999/q_auto:best/f_auto/v1/DAM/Photos/Destinations/Asia/India/Goa/shutterstock_772145203.jpg"/>
+            <img src="https://res.cloudinary.com/lastminute-contenthub/image/upload/c_lfill,ar_10:6/c_limit,w_768,h_999999/q_auto:best/f_auto/v1/DAM/PPC/Countries/India/jaipur.jpg" />
           </div>
         </div>
+            <div class="FandhRecomimg1name">Arambol,India</div>
+            <div class="FandhRecomimg2name">Candolim,India</div>
+            <div class="FandhRecomimg3name">Jaipur,India</div>
+      {/* <div id="Fandhdestibottom">hello this is</div> */}
       </div>
 
     </div>

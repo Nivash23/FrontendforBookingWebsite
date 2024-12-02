@@ -39,6 +39,7 @@ function Registration({ regbut, setRegbut, setLogbut }) {
       setTimeout(() => {
         
         setRegbut('Reinactive');
+
         setLogbut('Lactive');
       },2000)
     }
@@ -140,8 +141,9 @@ function Registration({ regbut, setRegbut, setLogbut }) {
               setGoogleRegisterdetails({
                 email: credentialDecode.email,
                 name: credentialDecode.name,
-                profile: credentialDecode.profile,
+                profile: credentialDecode.picture,
               });
+              console.log(credentialDecode.picture)
               GoogleReghandler();
             }}
             onError={() => {

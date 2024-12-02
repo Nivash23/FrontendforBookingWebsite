@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 
-function login({ logbut, setLogbut, setRegbut }) {
+function login({ logbut, setLogbut, setRegbut,setLoginresponsedetails }) {
   
   const [responsemsg, setResponsemsg] = useState('');
 
@@ -10,6 +10,7 @@ function login({ logbut, setLogbut, setRegbut }) {
     Gemail: "",
     Gpassword: "",
   });
+  
 
   const [googlelogindetails, setGooglelogindetails] = useState({
     email: "",
@@ -22,7 +23,7 @@ function login({ logbut, setLogbut, setRegbut }) {
       
     };
 
-    const response = await fetch("https://bookingwebsitebackend-rkgz.onrender.com/api/google/googlelog/", {
+    const response = await fetch("http://127.0.0.1:3012/api/google/googlelog/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,12 +33,16 @@ function login({ logbut, setLogbut, setRegbut }) {
 
       const data = await response.json();
       setResponsemsg(data.message);
+
       setTimeout(() => {
         setResponsemsg('');
       }, 4000)
       if (response.status == 200)
       {
-
+        setLoginresponsedetails({
+          username: data.loguser.Name,
+          profile:data.loguser.Profile
+        })
         setTimeout(() => {
           
           setLogbut('Linactive');
@@ -63,7 +68,8 @@ function login({ logbut, setLogbut, setRegbut }) {
       body: JSON.stringify(guestlogbody),
     });
     const data = await response.json();
-    setResponsemsg(data.message)
+      setResponsemsg(data.message)
+      
 
     if (response.status == 200) {
       setGuestlogindetails({

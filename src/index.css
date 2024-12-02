@@ -8,7 +8,7 @@
     margin:-10px -10px -10px -10px;
     padding:0px 0px 0px 0px;
     border:0px 0px 0px 0px;
-    background-color: #eceff2;
+    background-color: #e8eaed;
     box-sizing: border-box;
     overflow: hidden;
     /* overflow-x: scroll; */
@@ -52,11 +52,57 @@
   width:1.6rem;
   height:1.6rem;
 }
+.Profileactive{
+    #profilecontainerbox{
+        display:block;
+    }
+}
+.Profileinactive{
+    #profilecontainerbox{
+        display:none;
+    }
+}
+#profilearrowdesign{
+    width:0px;
+    height:0px;
+    border-bottom: 20px solid white;
+    border-right: 10px solid transparent;
+    position: absolute;
+    margin:-30px 0px 0px 0px;
+    z-index: 1;
+    border-left: 10px solid transparent;
+}
+#profilecontainerbox img{
+    width:30px;
+    height:30px;
+    border-radius: 30px;
+}
+#profilecontainerbox{
+    width:150px;
+    height:150px;
+    background-color: white;
+    position: absolute;
+    margin:-100px 0px 0px 150px;
+    z-index: 2;
+    padding:10px 10px 10px 10px;
+    border-radius: 10px;
+
+}
+#profilecontainerbox #name{
+    font-weight: bold;
+}
 
 #logo{
-    margin:1.2rem 28rem 0rem 11rem;
+    display: flex;
+    margin:1.2rem 28rem 0rem 9rem;
     font-size: 1.5rem; 
     font-weight: bold;
+    cursor: pointer;
+}
+#logo ion-icon{
+    margin:4px 10px 0px 0px;
+    width:27px;
+    height:27px;
 }
 #navrouters{
     display: flex;
@@ -488,9 +534,18 @@
     border-radius: 15px;
     cursor: pointer;
 }
+#CarhiredestiCard{
+    background-color: rgb(198, 199, 199);
+    width:200px;
+    padding:5px 5px 5px 5px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 #Carhiredestinations{
-    margin:30px 0px 10px 60px  ;
-    width:800px;
+    margin:30px 0px 10px 60px ;
+    width:1000px;
+    height:600px;
 }
 #Carhiredestinationname{
     font-weight: bold;
@@ -505,7 +560,7 @@
     margin:3px 0px 5px 35px;
 }
 #Carhiredestinationimage img{
-    width:180px;
+    width:190px;
     height:150px;
     border-radius: 7px;
 }
@@ -697,6 +752,36 @@
     border-radius:10px;
     font-size: 16px;
 }
+#Frentdate{
+    position: absolute;
+    margin:120px 0px 0px 500px;
+}
+.Finteroptbutactive{
+    background-color: blueviolet;
+    color:white;
+}
+.Fdomesoptbutactive{
+    background-color: blueviolet;
+    color:white;
+}
+.Finteroptbutinactive{
+    background-color: whitesmoke;
+    color:black;
+}
+.Fdomesoptbutinactive{
+    background-color:whitesmoke;
+    color:black;
+}
+.FCalinactive{
+    #Frentdate{
+        display: none;
+    }
+}
+.FCalactive{
+    #Frentdate{
+        display: block;
+    }
+}
 #gateway{
     width:520px;
     height:200px;
@@ -790,7 +875,7 @@
 }
 #Regcontainer h4{
    font-size: 22px;
-   margin:60px 0px 30px 80px;
+   margin:40px 0px 30px 80px;
 }
 #Regcontainer label,h4{
     font-weight: bold;
@@ -835,7 +920,7 @@
 }
 #logcontainer h4{
    font-size: 22px;
-   margin:60px 0px 30px 80px;
+   margin:40px 0px 30px 80px;
 }
 #logcontainer label,h4{
     font-weight: bold;
@@ -1021,7 +1106,8 @@
     font-weight: bold;
 }
 #ARecommendcards{
-    margin:50px 100px 0px 180px;
+    margin:50px 100px 10px 180px;
+    height:600px;
 }
 #Arecommendplaceimage img{
     width:230px;

@@ -10,10 +10,19 @@ import Flightandhotel from "../Components/Flightandhotel";
 import CarRentals from "../Components/CarRentals";
 import Attractions from "../Components/Attractions";
 import AirportTaxi from "../Components/AirportTaxi";
+import Profilecontainer from '../Components/profile';
 
 function Bookings() {
   const [regbut, setRegbut] = useState("Reinactive");
   const [logbut, setLogbut] = useState("Linactive");
+  const [loginresponsedetails, setLoginresponsedetails] = useState({
+    username: "",
+    profile:"",
+  })
+  const [profilecontainerstate, setProfilecontianerstate] = useState('Profileinactive');
+  const profilefocushandle = () => {
+    setProfilecontianerstate('Profileactive')
+  }
 
   const [routebut, setRoutebut] = useState({
     stays: "Ractive",
@@ -25,11 +34,22 @@ function Bookings() {
   });
 
   return (
-    <div id="body">
+    <div id="body" >
       <Router>
         <div id="navigation">
           <div id="nav">
-            <div id="logo">TravelsBookingWeb</div>
+            <div id="logo" onClick={() => {
+              if (profilecontainerstate == "Profileinactive")
+              {
+                setProfilecontianerstate('Profileactive')
+              }
+              else {
+                setProfilecontianerstate('Profileinactive')
+              }
+            }} 
+            >
+              <div><ion-icon name="person-circle-outline"></ion-icon></div>
+              <div>TravelsBookingWeb</div></div>
             <div id="menus">
               <div>INR</div>
               <div>
@@ -122,10 +142,16 @@ function Bookings() {
           setRegbut={setRegbut}
           setLogbut={setLogbut}
         />
-      </div>
+        </div>
+        <div>
+          <Profilecontainer loginusername={loginresponsedetails.username } loginuserprofile={loginresponsedetails.profile} profilecontainerstate={profilecontainerstate} />
+        </div>
       <div>
-        <Login logbut={logbut} setLogbut={setLogbut} setRegbut={setRegbut} />
-      </div>
+        <Login logbut={logbut} setLogbut={setLogbut} setRegbut={setRegbut} setLoginresponsedetails={setLoginresponsedetails} />
+        </div>
+        <div>
+    
+        </div>
         <Routes>
           <Route path="/"  element={<Stays routebut={routebut} setRoutebut={setRoutebut} />}/>
           <Route path="/stays"  element={<Stays routebut={routebut} setRoutebut={setRoutebut} />}/>

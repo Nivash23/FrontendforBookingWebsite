@@ -3,7 +3,7 @@ import React from 'react'
 function AttractplacesCard({imgsrc,name}) {
   return (
       <div>
-      <div>
+      <div id="Aplacebox">
         <div id="Arecommendplaceimage">
           
               <img src={imgsrc} />

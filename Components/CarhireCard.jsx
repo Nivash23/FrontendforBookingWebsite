@@ -3,7 +3,7 @@ import React from 'react'
 function CarhireCard({imgsrc,name,price,cars}) {
   return (
       <div>
-          <div >
+          <div id="CarhiredestiCard" >
         <div id="Carhiredestinationimage">
           
               <img src={imgsrc} />
