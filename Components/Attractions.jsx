@@ -41,7 +41,7 @@ function Attractions({ routebut, setRoutebut }) {
     }, [])
   
   const handleplaces = async() => {
-    const res = await fetch('http://127.0.0.1:3012/api/Recommentplaces/')
+    const res = await fetch('https://bookingwebsitebackend-rkgz.onrender.com/api/Recommentplaces/')
     
     const data = await res.json();
     setRecomendobject(data)

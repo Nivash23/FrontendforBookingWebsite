@@ -35,7 +35,7 @@ function CarRentals({ routebut, setRoutebut }) {
   }, []);
 
   const handlehiredestinations =async () => {
-    const res = await fetch('http://127.0.0.1:3012/api/cardestination/')
+    const res = await fetch('https://bookingwebsitebackend-rkgz.onrender.com/api/cardestination/')
     const data = await res.json();
 
     if (res.status == 200)

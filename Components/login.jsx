@@ -23,7 +23,7 @@ function login({ logbut, setLogbut, setRegbut,setLoginresponsedetails }) {
       
     };
 
-    const response = await fetch("http://127.0.0.1:3012/api/google/googlelog/", {
+    const response = await fetch("https://bookingwebsitebackend-rkgz.onrender.com/api/google/googlelog/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

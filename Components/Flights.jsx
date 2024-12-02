@@ -28,7 +28,7 @@ function Flights({ routebut, setRoutebut }) {
   const [popularflights, setPopularflights] = useState([]);
 
   const handlePopularflights = async () => {
-    const res = await fetch("http://127.0.0.1:3012/api/popularflight/");
+    const res = await fetch("https://bookingwebsitebackend-rkgz.onrender.com/api/popularflight/");
     const data = await res.json();
 
     if (res.status == 200) {
